@@ -32,6 +32,11 @@ public class HomeController {
             @Override
             public void run() {
                 App.robot.keyPress(button); // pression sur le bouton
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 App.robot.keyRelease(button); //application qui recupere l'appui sur un bouton pour définir de quel bouton il s'agit
             }
         });
