@@ -12,6 +12,9 @@ import com.koushikdutta.ion.Ion;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class activity_NES extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
+    String IP = "192.126.0.28";
+
+    String IP = "192.168.0.28";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,7 @@ public class activity_NES extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonA:
                 x = 88;
                 Ion.with(activity_NES.this)
-                        .load("http://192.168.0.28:8080/keyboard?key=" + x)
+                        .load("http://" + IP + ":8080/keyboard?key=" + x)
                         .asString()
                         .setCallback(new FutureCallback<String>() {
                             @Override
@@ -54,7 +57,7 @@ public class activity_NES extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonB:
                 x = 87;
                 Ion.with(activity_NES.this)
-                        .load("http://192.168.0.28:8080/keyboard?key=" + x)
+                        .load("http://" + IP + ":8080/keyboard?key=" + x)
                         .asString()
                         .setCallback(new FutureCallback<String>() {
                             @Override
@@ -75,7 +78,7 @@ public class activity_NES extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonUp:
                 x = 72;
                 Ion.with(activity_NES.this)
-                        .load("http://192.168.0.28:8080/keyboard?key=" + x)
+                        .load("http://" + IP + ":8080/keyboard?key=" + x)
                         .asString()
                         .setCallback(new FutureCallback<String>() {
                             @Override
@@ -88,7 +91,7 @@ public class activity_NES extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonDown:
                 x = 75;
                 Ion.with(activity_NES.this)
-                        .load("http://192.168.0.28:8080/keyboard?key=" + x)
+                        .load("http://" + IP + ":8080/keyboard?key=" + x)
                         .asString()
                         .setCallback(new FutureCallback<String>() {
                             @Override
@@ -101,7 +104,7 @@ public class activity_NES extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonLeft:
                 x = 78;
                 Ion.with(activity_NES.this)
-                        .load("http://192.168.0.28:8080/keyboard?key=" + x)
+                        .load("http://" + IP + ":8080/keyboard?key=" + x)
                         .asString()
                         .setCallback(new FutureCallback<String>() {
                             @Override
@@ -114,7 +117,7 @@ public class activity_NES extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonRight:
                 x = 80;
                 Ion.with(activity_NES.this)
-                        .load("http://192.168.0.28:8080/keyboard?key=" + x)
+                        .load("http://" + IP + ":8080/keyboard?key=" + x)
                         .asString()
                         .setCallback(new FutureCallback<String>() {
                             @Override
